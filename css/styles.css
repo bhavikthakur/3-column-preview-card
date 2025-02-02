@@ -1,0 +1,265 @@
+/* --------------CSS RESET------------------------------ */
+
+/* 1. Using easy to style box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Removing default margin */
+* {
+    margin: 0;
+}
+
+
+/* 5. Improving media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoiding text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Better line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+:root {
+
+    /* ----primary colors------ */
+    --clr-orange-500: hsl(31, 77%, 52%);
+    --clr-cyan-500: hsl(184, 100%, 22%);
+    --clr-cyan-900: hsl(179, 100%, 13%);
+    /* ------secondary colors------ */
+    --clr-white-300: hsla(0, 0%, 100%, 0.75);
+    --clr-white-500: hsl(0, 0%, 95%);
+}
+
+body {
+    /* 3. Adding accessible line-height */
+    line-height: 1.5;
+    /* 4. Improving text rendering */
+    -webkit-font-smoothing: antialiased;
+    /* Heading Font Weight = 700 */
+    /* font-family: "Big Shoulders Display", serif; = 700 */
+    /* Body Font Weight = 400 */
+    font-family: "Lexend Deca", serif;
+    font-weight: 400;
+    font-size: 0.938rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--clr-white-300);
+
+}
+
+/* --------PAGE WRAPPER---------------- */
+
+.page-wrapper {
+    max-width: 620px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0;
+}
+
+
+
+/* -----------GLOBAL STYLE----------- */
+
+
+.section-container {
+
+    padding: 2em;
+}
+
+.section-title,
+.section-body,
+.section-btn {
+    margin-top: 1em;
+}
+
+.section-img {
+    max-width: 100%;
+}
+
+.section-title {
+    font-family: "Big Shoulders Display", serif;
+    color: var(--clr-white-500);
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+}
+
+.section-btn {
+    display: inline-block;
+    padding: 0.8em 2em;
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-radius: 1.5em;
+    transition: all 0.3s ease-in;
+    font-weight: 400;
+
+}
+
+.section-btn:hover,
+.section-btn:focus {
+    background-color: transparent;
+    border: 2px solid var(--clr-white-500);
+    color: var(--clr-white-300);
+
+}
+
+/* ----------SEDAN SECTION---------------- */
+
+.sedan-container {
+    background-color: var(--clr-orange-500);
+    border-radius: 0.5em 0.5em 0 0;
+
+}
+
+.sedan-btn {
+    background-color: var(--clr-white-500);
+    color: var(--clr-orange-500);
+    font-weight: 400;
+}
+
+
+
+
+/* -----------SUV SECTION--------------- */
+
+
+.suv-container {
+    background-color: var(--clr-cyan-500);
+
+}
+
+.suv-btn {
+    background-color: var(--clr-white-500);
+    color: var(--clr-cyan-500);
+}
+
+
+
+
+/* --------------LUXURY SECTION----------------- */
+
+
+.luxury-container {
+    background-color: var(--clr-cyan-900);
+    border-radius: 0 0 0.5em 0.5em;
+
+}
+
+.luxury-btn {
+    background-color: var(--clr-white-500);
+    color: var(--clr-cyan-900);
+}
+
+
+
+
+/* --------------------MEDIA QUERIES--------------------------- */
+
+
+
+/* -----EXTRA SMALL SCREENS---------- */
+@media (max-width:350px) {
+    body {
+        font-size: 0.7rem;
+    }
+
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
+
+    .section-btn {
+        font-size: 0.6rem;
+        margin-bottom: 1em;
+    }
+}
+
+
+/* ----------LARGE SCREENS----- */
+
+@media (min-width:850px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .page-wrapper {
+        flex-direction: row;
+        align-items: stretch;
+        max-width: 850px;
+
+    }
+
+    .section-title,
+    .section-body,
+    .section-btn {
+        margin-top: 0em;
+    }
+
+    .section-container {
+        display: flex;
+        padding: 2.5em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-grow: 1;
+
+    }
+
+
+    .sedan-container {
+        border-radius: 0.5em 0 0 0.5em;
+    }
+
+    .luxury-container {
+        border-radius: 0 0.5em 0.5em 0;
+    }
+
+    .section-body {
+        margin-bottom: 3em;
+    }
+
+    .section-btn {
+        margin-top: auto;
+
+    }
+}
