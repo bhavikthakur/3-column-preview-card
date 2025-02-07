@@ -38,7 +38,7 @@ A responsive and accessible card component built using HTML, CSS, and Flexbox. T
 ## 🔧 Setup & Usage  
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/social-links-profile.git    
+   git clone https://github.com/bhavikthakur/3-column-preview-card.git
 2. Open index.html in your browser. 
 
 ## 🔓 Challenges and Learnings  
