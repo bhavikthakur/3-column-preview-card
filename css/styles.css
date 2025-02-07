@@ -1,59 +1,3 @@
-/* --------------CSS RESET------------------------------ */
-
-/* 1. Using easy to style box-sizing model */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* 2. Removing default margin */
-* {
-    margin: 0;
-}
-
-
-/* 5. Improving media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-}
-
-/* 6. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-/* 7. Avoiding text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-/* 8. Better line wrapping */
-p {
-    text-wrap: pretty;
-}
-
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-
 :root {
 
     /* ----primary colors------ */
@@ -137,7 +81,7 @@ body {
 .section-btn:hover,
 .section-btn:focus {
     background-color: transparent;
-    border: 2px solid var(--clr-white-500);
+    outline: 2px solid var(--clr-white-500);
     color: var(--clr-white-300);
 
 }
@@ -187,79 +131,4 @@ body {
 .luxury-btn {
     background-color: var(--clr-white-500);
     color: var(--clr-cyan-900);
-}
-
-
-
-
-/* --------------------MEDIA QUERIES--------------------------- */
-
-
-
-/* -----EXTRA SMALL SCREENS---------- */
-@media (max-width:350px) {
-    body {
-        font-size: 0.7rem;
-    }
-
-
-    .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 1em;
-    }
-
-    .section-btn {
-        font-size: 0.6rem;
-        margin-bottom: 1em;
-    }
-}
-
-
-/* ----------LARGE SCREENS----- */
-
-@media (min-width:850px) {
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .page-wrapper {
-        flex-direction: row;
-        align-items: stretch;
-        max-width: 850px;
-
-    }
-
-    .section-title,
-    .section-body,
-    .section-btn {
-        margin-top: 0em;
-    }
-
-    .section-container {
-        display: flex;
-        padding: 2.5em;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        flex-grow: 1;
-
-    }
-
-
-    .sedan-container {
-        border-radius: 0.5em 0 0 0.5em;
-    }
-
-    .luxury-container {
-        border-radius: 0 0.5em 0.5em 0;
-    }
-
-    .section-body {
-        margin-bottom: 3em;
-    }
-
-    .section-btn {
-        margin-top: auto;
-
-    }
 }

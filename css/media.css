@@ -1,0 +1,71 @@
+/* --------------------MEDIA QUERIES--------------------------- */
+
+
+
+/* -----EXTRA SMALL SCREENS---------- */
+@media (max-width:350px) {
+    body {
+        font-size: 0.7rem;
+    }
+
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
+
+    .section-btn {
+        font-size: 0.6rem;
+        margin-bottom: 1em;
+    }
+}
+
+
+/* ----------LARGE SCREENS----- */
+
+@media (min-width:850px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .page-wrapper {
+        flex-direction: row;
+        align-items: stretch;
+        max-width: 850px;
+
+    }
+
+    .section-title,
+    .section-body,
+    .section-btn {
+        margin-top: 0em;
+    }
+
+    .section-container {
+        display: flex;
+        padding: 2.5em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-grow: 1;
+
+    }
+
+
+    .sedan-container {
+        border-radius: 0.5em 0 0 0.5em;
+    }
+
+    .luxury-container {
+        border-radius: 0 0.5em 0.5em 0;
+    }
+
+    .section-body {
+        margin-bottom: 3em;
+    }
+
+    .section-btn {
+        margin-top: auto;
+
+    }
+}
